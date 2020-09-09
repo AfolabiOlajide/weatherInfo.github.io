@@ -18,6 +18,7 @@ let searchBtn = document.getElementById('searchBtn')
 let searchInput = document.getElementById('searchInput');
 let infoBox = document.getElementById('info');
 let err1 = document.getElementById('error');
+let log = document.getElementById('log');
 
 
 const apiKey = 'c2cb06d21e8bc851cdc844acd44fa94b';
@@ -40,28 +41,35 @@ searchBtn.addEventListener('click', e => {
                 </div>
         `
         // adding the infomation to the DOM
-        infoBox.appendChild(weatherInfo);
+        // infoBox.appendChild(weatherInfo);
+        // new method
+        infoBox.insertBefore(weatherInfo, infoBox.childNodes[0]);
         // closeing the box
         document.querySelector('.weather-info').addEventListener('click', e => {
             if(e.target.classList.contains('fa-window-close')){
-                removeBlock(e.target);
+                e.target.parentElement.remove();
             }
         })
         searchInput.value = '';
     })
     .catch( err => {
-                err1.style.display = 'block'
-                err1.innerHTML = 'Could not find a match try something similar'
+        let errorInfo = document.createElement('div')
+        errorInfo.classList.add('error')
+        errorInfo.innerHTML = `Could not find a match try something similar`
+                // err1.style.display = 'block'
+                // err1.innerHTML = 'Could not find a match try something similar'
+            log.insertBefore(errorInfo, log.childNodes[0]);
                 setTimeout( _ => {
-                    err1.remove()
+                    errorInfo.remove()
                 }, 3000)
-
-                searchInput.value = '';
+                
+        searchInput.value = '';
         
         throw err;
     })
 })
 
-function removeBlock(el){
-    el.parentElement.remove();
-}
+// call function to remove element
+// function removeBlock(el){
+//     el.parentElement.remove();
+// }
