@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Info</title>
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/2ed70768fe.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
+        <!-- heading -->
         <header>
             <span class="subHead1">Weather</span> <span class="subHead2">Info</span>
         </header>
+        <!-- search box -->
         <section>
-            <form action="">
+            <form >
                 <input type="text" placeholder="Enter City Name" id="searchInput">
-                <input type="button" value="Search" id="submitBtn">
+                <i class="fas fa-search" id="searchBtn"></i>
             </form>
-
+            <div class="error" id="error"></div>
         </section>
+        <!-- body / info -->
+        <div class="container">
+            <section id="info">
+                <!-- <div class="weather-info"> 
+                    <i class="fas fa-window-close"></i>
+                    <div class="main-info">
+                        <h4 class="location">Lagos</h4>
+                        <img src="icons/01d.png" alt="">
+                        <p class="description">description</p>
+                    </div>
+                </div> -->
+            </section>
+        </div>
     </main>
 <script src="main.js"></script>
 </body>
