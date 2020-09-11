@@ -8,6 +8,12 @@ if(navigator.serviceWorker){
     })
 }
 
+// add to home screen pop up
+    // if ((("standalone" in window.navigator) && !window.navigator.standalone) || (!window.matchMedia('(display-mode: standalone).maches'))){
+    //     addToHomeScreen();
+    // }
+// -------------------------------
+
 // Global Script
 
 // in your api call for temperature set unit=imperial for fahrenheit

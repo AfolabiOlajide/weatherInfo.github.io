@@ -15,9 +15,20 @@ body{
     /* background-size: cover;
     background-position: center; */
     height: 100vh;
-    /* overflow: hidden; */
+    overflow: auto;
     font-family: 'Lora', serif;
     
+}
+main::-webkit-scrollbar{
+    width: 10px;
+}
+main::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background: white;
+}
+main::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
 }
 main{
     width: 100%;
@@ -30,7 +41,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* overflow: scroll; */
+    overflow: auto;
 }
 
 .error{
@@ -98,7 +109,7 @@ input[type='text']{
 
 .container{
     width: 80%;
-    height: 60vh;
+    height: 65vh;
     margin: 2% auto;
 }
 
@@ -275,7 +286,7 @@ input[type='text']{
     }
     header{
         margin-top: 2%;
-        font-size: 3rem;
+        font-size: 1.7rem;
     }
     #site-name{
         display: grid;
@@ -283,6 +294,9 @@ input[type='text']{
     }
     .subHead2{
         margin-left: none;
+    }
+    main{
+        overflow: hidden;
     }
     form{
         margin-top: 1%;
@@ -297,21 +311,21 @@ input[type='text']{
         width: 90%;
         background: transparent;
         border-radius: 20px;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     #searchBtn{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .container{
         width: 90%;
-        height: 60vh;
+        height: 65vh;
         margin: 0 auto;
         margin-bottom: 10%;
     }
     .weather-info{
-        margin-top: 0%;
+        margin-top: -20%;
         height: 80%;
-        width: 250px;
+        width: 300px;
         padding: 10px;
         border-radius: 20px;
     }
@@ -348,7 +362,7 @@ input[type='text']{
     .weather-info{
         margin-top: -25%;
         background: rgba(255, 255, 255, 0.5);
-        height: 70%;
+        height: 75%;
         width: 250px;
         padding: 10px;
         border-radius: 20px;
