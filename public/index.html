@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Info</title>
+
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/2ed70768fe.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@700&display=swap" rel="stylesheet">
+    <!-- loral -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+<!-- web app manifest section end-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000">
+    <meta name="msapplication-TileColor" content="#043f88">
+<!-- web app manifest section end -->
+    
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.20.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.20.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+  </head>
+  <body id="wrapper">
+    <main>
+        <!-- heading -->
+        <header>
+            <img src="webicon.svg" alt="" class="icon">
+            <div id="site-name">
+                <span class="subHead1">Weather</span>
+                <span class="subHead2">Info</span>
+            </div>
+        </header>
+        <!-- search box -->
+        <section id="log">
+            <form >
+                <input type="text" placeholder="Enter City Name" id="searchInput">
+                <i class="fas fa-search" id="searchBtn"></i>
+            </form>
+        </section>
+        <!-- body / info -->
+        <div class="container" id="container">
+            <section id="info" class="info">
+                <!-- <div class="weather-info"> 
+                    <i class="fas fa-window-close"></i>
+                    <div class="main-info">
+                        <h4 class="location">Lagos</h4>
+                        <img src="icons/01d.png" alt="">
+                        <p class="description">description</p>
+                    </div>
+                </div> -->
+            </section>
+        </div>
+        <!-- <div class="clear-box">
+            <input type="submit" value="Clear history" id="clear-history">
+        </div> -->
+    </main>
+<script src="main.js"></script>
+</body>
+</html>
